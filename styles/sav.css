@@ -1376,6 +1376,9 @@
 * .tooltip {
   position: relative;
 }
+#trauma-list .tooltip {
+  position: inherit;
+}
 * .tooltip .tooltiptext {
   visibility: collapse;
   opacity: 0;

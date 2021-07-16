@@ -90,6 +90,10 @@ export class SaVSheet extends ActorSheet {
 			    html += `<label class="flex-horizontal" for="select-item-${e._id}">`;
 			    html += `${game.i18n.localize(e.name)} ${addition_price_load} <i class="tooltip fas fa-question-circle"><span class="tooltiptext left">${game.i18n.localize(e.data.description)}</span></i>`;
 			    html += `</label>`;
+		    } else if ( ( ( main_systems.includes( e.data.class ) ) && ( overloaded[ ( e.data.class.charAt(0).toUpperCase() + e.data.class.slice(1) ) ] === 1 ) )) {
+			    html += `<label class="flex-horizontal" style="text-decoration: line-through">`;
+			    html += `${game.i18n.localize(e.name)} ${addition_price_load} <i class="tooltip fas fa-question-circle"><span class="tooltiptext left">${game.i18n.localize(e.data.description)}</span></i>`;
+			    html += `</label>`;
 		    }
 	    } else if (e.type === "crew_ability") {
 		    if (e.data.class === this.actor.data.data.ship_class) {
