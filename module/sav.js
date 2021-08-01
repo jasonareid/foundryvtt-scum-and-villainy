@@ -153,6 +153,7 @@ Hooks.once("init", async function() {
   });
 
   Handlebars.registerHelper('enrich', (text) => {
+    if( ! text ) return '';
     return TextEditor.enrichHTML(text);
   });
 
