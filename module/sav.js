@@ -152,6 +152,10 @@ Hooks.once("init", async function() {
     return new Handlebars.SafeString(text);
   });
 
+  Handlebars.registerHelper('enrich', (text) => {
+    return TextEditor.enrichHTML(text);
+  });
+
   // "N Times" loop for handlebars.
   //  Block is executed N times starting from n=1.
   //

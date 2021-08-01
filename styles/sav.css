@@ -115,6 +115,10 @@
 * .editor-content {
   min-height: 280px;
 }
+* #tags_editor_sibling + .editor,
+* #tags_editor_sibling + .editor .editor-content {
+  min-height: 100px;
+}
 * .flex-horizontal {
   display: flex;
   flex-direction: row;
@@ -1058,11 +1062,8 @@
 * #all-items .item div {
 	flex-grow: 0;
 }
-* .item div {
+* .item > div {
   flex-grow: 3;
-}
-* .item .item-control {
-  flex-grow: 1;
 }
 * #all-items .item .item-body {
 	width: auto;

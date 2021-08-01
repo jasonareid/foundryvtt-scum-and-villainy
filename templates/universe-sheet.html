@@ -88,7 +88,10 @@
 		  					          <td>{{data.weird}} / 3</td>
                         </tr>
 		  			          </table>
-		  			          <div class="item-description">{{planet.data.rule}}</div>
+		  			          <div class="item-description">
+                                  {{planet.data.rule}}<br />
+                                  {{{enrich planet.data.tags}}}
+                              </div>
                     </div>
 		  		        {{/if}}
 		  		      {{/if}}
